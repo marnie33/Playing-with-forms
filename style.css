@@ -1,0 +1,182 @@
+.dialogoverlay {
+    opacity: .9;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    background-color: black;
+    width: 100%;
+    z-index: 10;
+}
+
+.dialogbox {
+    position: fixed;
+    background: #B43104;
+    border-radius: 7px;
+    width: 550px;
+    z-index: 10;
+    padding: 2px;
+    box-shadow: 3px 3px 7px 3px #1C1C1C;
+}
+
+.dialogbox div {
+    background: #F7D358;
+    margin: 4px;
+    padding: 2px;
+}
+
+.dialogbox div #dialogboxhead {
+    background: #F5DA81;
+    margin-bottom: 5px;
+    font-size: 22px;
+    font-family: 'Quattrocento Sans', sans-serif;
+    padding: 10px;
+    height: 54px;
+    color: #B43104;
+    text-align: center;
+    font-weight: bold;
+    border: 2px solid #B43104;
+    box-shadow: 2px 2px 5px 2px #1C1C1C;
+    text-shadow: 3px 3px 7px #1C1C1C;
+}
+
+.dialogbox div #dialogboxbody {
+    background: #F5DA81;
+    padding: 20px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-family: 'Cabin Condensed', sans-serif;
+    font-size: 20px;
+    color: #B43104;
+    border: 2px solid #B43104;
+    box-shadow: 2px 2px 5px 2px #1C1C1C;
+    text-shadow: 3px 3px 7px #1C1C1C;
+}
+
+.dialogbox div #dialogboxfoot {
+    background: #F5DA81;
+    padding: 10px;
+    text-align: right;
+    margin-top: 5px;
+    height: 54px;
+    border: 2px solid #B43104;
+    box-shadow: 2px 2px 5px 2px #1C1C1C;
+}
+
+#okbtn {
+    background: #F7D358;
+    font-family: 'Quattrocento Sans', sans-serif;
+    font-size: 14px;
+    color: #B43104;
+    border: 2px solid #B43104;
+    font-weight: bold;
+    box-shadow: 2px 2px 5px 2px #1C1C1C;
+}
+
+#leftForm {
+    border: 2px solid black;
+    background-color: rgba(0,0,0,0.6);
+    box-shadow: 3px 3px 7px 3px #1C1C1C;
+}
+
+#leftForm label {
+     max-width: 40px;
+}
+
+.dis {
+    padding: 5px;
+    margin:5px;
+    height: 40px;
+}
+
+#spacer {
+    margin-bottom: 15px;
+}
+
+.header {
+    margin-top: 25px;
+    border-bottom: 2px solid black;
+    border-top: 2px solid black;
+    padding: 15px;
+    background-color: rgba(0,0,0,0.7);
+    box-shadow: 3px 3px 7px 3px #1C1C1C;
+    color: #F5F6CE;
+    text-shadow: 3px 3px 7px #1C1C1C;
+    text-align: center;
+    font-size: 48px;
+    font-weight: bold;
+    font-family: 'Coming Soon', cursive;
+}
+
+#jumbo {
+    background-color: transparent;
+}
+
+#rightForm {
+    border: 2px solid black;
+    background-color: rgba(0,0,0,0.7);
+    box-shadow: 3px 3px 7px 3px #1C1C1C;
+}
+
+#rightForm label {
+     max-width: 40px;   
+}
+
+#midForm {
+    border: 2px solid black;
+    background-color: rgba(0,0,0,0.7);
+    box-shadow: 3px 3px 7px 3px #1C1C1C;
+}
+
+.footer {
+    padding: 15px;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    margin-bottom: 25px;
+    background-color: rgba(0,0,0,0.7);
+    box-shadow: 3px 3px 7px 3px #1C1C1C;
+    color: #F5F6CE;
+    font-size: 18px;
+    font-weight: bold;
+    text-shadow: 3px 3px 7px #1C1C1C;
+    font-family: 'Coming Soon', cursive;
+}
+
+#table {
+    padding: 5px;
+    margin: 5px;
+}
+
+body {
+    background-image: url(http://upload.wikimedia.org/wikipedia/commons/7/72/Omega_Nebula.jpg);
+    background-size: cover;
+    font-family: 'Quattrocento Sans', sans-serif;
+}
+
+label {
+    color: #F5F6CE;
+    font-size:18px;
+    text-shadow: 3px 3px 7px #1C1C1C;
+}
+
+#subtitle {
+    font-size: 18px;
+}
+
+button{
+    color: #FBFBEF;
+    border: 2px solid black;
+    box-shadow: 2px 2px 5px 2px #1C1C1C;
+    text-shadow: 3px 3px 7px black;
+}
+
+.arrow {
+    background-color: #F7D358;
+}
+
+.xclose {
+    background-color: #B43104;
+}
+
+.help {
+    background-color: #2EFEC8;
+}

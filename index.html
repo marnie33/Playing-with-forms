@@ -1,0 +1,272 @@
+<!--Created by: Cy <3
+(aka: Marnie Tisdale)
+Date Created: 9/19/14
+Last Modified: 9/23/14
+
+Summary: This is a sample of a web page with an interactive form. It will take input and display it on the page. The user controls how information moves across the page, the "X" button clears-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <link href='http://fonts.googleapis.com/css?family=Cabin+Condensed|Quattrocento+Sans|Coming+Soon' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" type="text/css"/>
+    <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/themes/smoothness/jquery-ui.css" type="text/css"/>
+    <link type="text/css" rel="stylesheet" href="style.css"/>
+    <!--^my stylesheet for "homegrown" css-->
+    
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+    <!--^ my JavaScript/jQuery file for index.html-->
+    
+</head>
+    <body>
+        
+        <!--header-->
+        <div class="header">
+            <div class="container">
+                Playing With Forms
+                <div id="subtitle">These are a few of your favorite things!</div>
+            </div>
+        </div>
+        
+         <!--main page area-->
+        <div class="jumbotron" id="jumbo">
+            <div class="container">
+                <div class="row">
+                    
+                    <!--left form for user input to be displayed-->
+                    <div class="col-md-3">
+                        <div id="leftForm">
+                            <br>
+                            <label class="dis" id="lb1">&nbsp;</label>
+                            <button class="dis pull-right xclose" id="lxbtn1" onclick="clearX.noText()">X</button>
+                            <button class="dis pull-right arrow" id="lbtn1" onclick="moveLtoR.moveR()">&#62;</button><br>
+                            
+                            <label class="dis" id="lb2"></label>
+                            <button class="dis pull-right xclose" id="lxbtn2" onclick="clearX.noText2()">X</button>
+                            <button class="dis pull-right arrow" id="lbtn2" onclick="moveLtoR.moveR2()">&#62;</button><br>
+                            
+                            <label class="dis" id="lb3"></label>
+                            <button class="dis pull-right xclose" id="lxbtn3" onclick="clearX.noText3()">X</button>
+                            <button class="dis pull-right arrow" id="lbtn3" onclick="moveLtoR.moveR3()">&#62;</button><br>
+                            
+                            <label class="dis" id="lb4"></label>
+                            <button class="dis pull-right xclose" id="lxbtn4" onclick="clearX.noText4()">X</button>
+                            <button class="dis pull-right arrow" id="lbtn4" onclick="moveLtoR.moveR4()">&#62;</button><br>
+                            
+                            <label class="dis" id="lb5"></label>
+                            <button class="dis pull-right xclose" id="lxbtn5" onclick="clearX.noText5()">X</button>
+                            <button class="dis pull-right arrow" id="lbtn5" onclick="moveLtoR.moveR5()">&#62;</button><br>
+                          
+                            <label class="dis" id="lb6"></label>
+                            <button class="dis pull-right xclose" id="lxbtn6" onclick="clearX.noText6()">X</button>
+                            <button class="dis pull-right arrow" id="lbtn6" onclick="moveLtoR.moveR6()">&#62;</button><br>
+                            
+                            <label class="dis" id="lb7"></label>
+                            <button class="dis pull-right xclose" id="lxbtn7" onclick="clearX.noText7()">X</button>
+                            <button class="dis pull-right arrow" id="lbtn7" onclick="moveLtoR.moveR7()">&#62;</button><br>
+                           
+                            <label class="dis" id="lb8"></label>
+                            <button class="dis pull-right xclose" id="lxbtn8" onclick="clearX.noText8()">X</button>
+                            <button class="dis pull-right arrow" id="lbtn8" onclick="moveLtoR.moveR8()">&#62;</button><br>
+                           
+                            <label class="dis" id="lb9"></label>
+                            <button class="dis pull-right xclose" id="lxbtn9" onclick="clearX.noText9()">X</button>
+                            <button class="dis pull-right arrow" id="lbtn9" onclick="moveLtoR.moveR9()">&#62;</button><br>
+                            
+                            <label class="dis" id="lb10"></label>
+                            <button class="dis pull-right xclose" id="lxbtn10" onclick="clearX.noText10()">X</button>
+                            <button class="dis pull-right arrow" id="lbtn10" onclick="moveLtoR.moveR10()">&#62;</button><br>
+                           
+                            <label class="dis" id="lb11"></label>
+                            <button class="dis pull-right xclose" id="lxbtn11" onclick="clearX.noText11()">X</button>
+                            <button class="dis pull-right arrow" id="lbtn11" onclick="moveLtoR.moveR11()">&#62;</button><br>
+                            
+                            <label class="dis" id="lb12"></label>
+                            <button class="dis pull-right xclose" id="lxbtn12" onclick="clearX.noText12()">X</button>
+                            <button class="dis pull-right arrow" id="lbtn12" onclick="moveLtoR.moveR12()">&#62;</button><br>
+                            <div id="spacer"></div>
+                        </div>
+                    </div><!--end left side of form page, labels for user input-->
+                    
+                    <!--center form for user input-->
+                    <div class="col-md-6">
+                        <div id="midForm">
+                            <table id="table">
+                                <tr>
+                                    <td><label id="mlb1" class="dis">Favorite Album:</label></td>
+                                    <td><input type="textbox" class="dis boxSize" id="tbx1" size="35"/></td>
+                                    <td><button class="dis help" id="help1" onclick="Alert.render('Simply type the name of your favorite musical album in the box, then use the arrows to move it around the page! The X button will clear out so you can play again.')">?</button></td>
+                                    <td><button class="dis arrow" id="left1" onclick="moveCtoL.transfer()">&#60;</button></td>
+                                    <td><button class="dis arrow" id="right1" onclick="moveCtoR.rtransfer()">&#62;</button></td>
+                                    <td><button class="dis xclose" id="mxbtn1" onclick="clearX.noTextm()">X</button></td>
+                                </tr>
+                                <tr>
+                                    <td><label id="mlb2" class="dis">Favorite Artist:</label></td>
+                                    <td><input type="textbox" class="dis" id="tbx2" size="35"/></td>
+                                    <td><button class="dis help" id="help2" onclick="Alert.render('Simply type the name of your favorite musical artist or band in the box, then use the arrows to move it around the page! The X button will clear out so you can play again.')">?</button></td>
+                                    <td><button class="dis arrow" id="left2" onclick="moveCtoL.transfer2()">&#60;</button></td>
+                                    <td><button class="dis arrow" id="right2" onclick="moveCtoR.rtransfer2()">&#62;</button></td>
+                                    <td><button class="dis xclose" id="mxbtn1" onclick="clearX.noTextm2()">X</button></td>
+                                </tr>
+                                <tr>
+                                    <td><label id="mlb3" class="dis">Favorite Color:</label></td>
+                                    <td><input type="textbox" class="dis" id="tbx3" size="35"/></td>
+                                    <td><button class="dis help" id="help3" onclick="Alert.render('Simply type the name of your very favorite color in the box, then use the arrows to move it around the page! The X button will clear out so you can play again.')">?</button></td>
+                                    <td><button class="dis arrow" id="left3" onclick="moveCtoL.transfer3()">&#60;</button></td>
+                                    <td><button class="dis arrow" id="right3" onclick="moveCtoR.rtransfer3()">&#62;</button></td>
+                                    <td><button class="dis xclose" id="mxbtn1" onclick="clearX.noTextm3()">X</button></td>
+                                </tr>
+                                <tr>
+                                    <td><label id="mlb4" class="dis">Favorite Name:</label></td>
+                                    <td><input type="text" class="dis" id="tbx4" size="35"/></td>
+                                    <td><button class="dis help" id="help4" onclick="Alert.render('Simply type your favorite name in the box, boys or girls, then use the arrows to move it around the page! The X button will clear out so you can play again.')">?</button></td>
+                                    <td><button class="dis arrow" id="left4" onclick="moveCtoL.transfer4()">&#60;</button></td>
+                                    <td><button class="dis arrow" id="right4" onclick="moveCtoR.rtransfer4()">&#62;</button></td>
+                                    <td><button class="dis xclose" id="mxbtn1" onclick="clearX.noTextm4()">X</button></td>
+                                </tr>
+                                <tr>
+                                    <td><label id="mlb5" class="dis">Favorite Place:</label></td>
+                                    <td><input type="text" class="dis" id="tbx5" size="35"/></td>
+                                    <td><button class="dis help" id="help5" onclick="Alert.render('Simply type the name of your favorite place to be in the box, then use the arrows to move it around the page! The X button will clear out so you can play again.')">?</button></td>
+                                    <td><button class="dis arrow" id="left5" onclick="moveCtoL.transfer5()">&#60;</button></td>
+                                    <td><button class="dis arrow" id="right5" onclick="moveCtoR.rtransfer5()">&#62;</button></td>
+                                    <td><button class="dis xclose" id="mxbtn1" onclick="clearX.noTextm5()">X</button></td>
+                                </tr>
+                                <tr>
+                                    <td><label id="mlb6" class="dis">Favorite Song:</label></td>
+                                    <td><input type="text" class="dis" id="tbx6" size="35"/></td>
+                                    <td><button class="dis help" id="help6" onclick="Alert.render('Simply type the name of your favorite tune in the box, then use the arrows to move it around the page! The X button will clear out so you can play again.')">?</button></td>
+                                    <td><button class="dis arrow" id="left6" onclick="moveCtoL.transfer6()">&#60;</button></td>
+                                    <td><button class="dis arrow" id="right6" onclick="moveCtoR.rtransfer6()">&#62;</button></td>
+                                    <td><button class="dis xclose" id="mxbtn1" onclick="clearX.noTextm6()">X</button></td>
+                                </tr>
+                                <tr>
+                                    <td><label id="mlb7" class="dis">Favorite Book:</label></td>
+                                    <td><input type="text" class="dis" id="tbx7" size="35"/></td>
+                                    <td><button class="dis help" id="help7" onclick="Alert.render('Simply type the name of your favorite novel in the box, then use the arrows to move it around the page! The X button will clear out so you can play again.')">?</button></td>
+                                    <td><button class="dis arrow" id="left7" onclick="moveCtoL.transfer7()">&#60;</button></td>
+                                    <td><button class="dis arrow" id="right7" onclick="moveCtoR.rtransfer7()">&#62;</button></td>
+                                    <td><button class="dis xclose" id="mxbtn1" onclick="clearX.noTextm7()">X</button></td>
+                                </tr>
+                                <tr>
+                                    <td><label id="mlb8" class="dis">Favorite Movie:</label></td>
+                                    <td><input type="text" class="dis" id="tbx8" size="35"/></td>
+                                    <td><button class="dis help" id="help8" onclick="Alert.render('Simply type the name of your favorite movie in the box, then use the arrows to move it around the page! The X button will clear out so you can play again.')">?</button></td>
+                                    <td><button class="dis arrow" id="left8" onclick="moveCtoL.transfer8()">&#60;</button></td>
+                                    <td><button class="dis arrow" id="right8" onclick="moveCtoR.rtransfer8()">&#62;</button></td>
+                                    <td><button class="dis xclose" id="mxbtn1" onclick="clearX.noTextm8()">X</button></td>
+                                </tr>
+                                <tr>
+                                    <td><label id="mlb9" class="dis">Favorite Quote:</label></td>
+                                    <td><input type="text" class="dis" id="tbx9" size="35"/></td>
+                                    <td><button class="dis help" id="help9" onclick="Alert.render('Simply type the name of your favorite quote in the box, it can be any quote that catches your fancy, then use the arrows to move it around the page! The X button will clear out so you can play again.')">?</button></td>
+                                    <td><button class="dis arrow" id="left9" onclick="moveCtoL.transfer9()">&#60;</button></td>
+                                    <td><button class="dis arrow" id="right9" onclick="moveCtoR.rtransfer9()">&#62;</button></td>
+                                    <td><button class="dis xclose" id="mxbtn1" onclick="clearX.noTextm9()">X</button></td>
+                                </tr>
+                                <tr>
+                                    <td><label id="mlb10" class="dis">Favorite Character:</label></td>
+                                    <td><input type="text" class="dis" id="tbx10" size="35"/></td>
+                                    <td><button class="dis help" id="help10" onclick="Alert.render('Simply type the name of your favorite fictional character in the box, then use the arrows to move it around the page! The X button will clear out so you can play again.')">?</button></td>
+                                    <td><button class="dis arrow" id="left10" onclick="moveCtoL.transfer10()">&#60;</button></td>
+                                    <td><button class="dis arrow" id="right10" onclick="moveCtoR.rtransfer10()">&#62;</button></td>
+                                    <td><button class="dis xclose" id="mxbtn1" onclick="clearX.noTextm10()">X</button></td>
+                                </tr>
+                                <tr>
+                                    <td><label id="mlb11" class="dis">Favorite Fairytale:</label></td>
+                                    <td><input type="text" class="dis" id="tbx11" size="35"/></td>
+                                    <td><button class="dis help" id="help11" onclick="Alert.render('Simply type the name of your favorite fairy tale in the box, then use the arrows to move it around the page! The X button will clear out so you can play again.')">?</button></td>
+                                    <td><button class="dis arrow" id="left11" onclick="moveCtoL.transfer11()">&#60;</button></td>
+                                    <td><button class="dis arrow" id="right11" onclick="moveCtoR.rtransfer11()">&#62;</button></td>
+                                    <td><button class="dis xclose" id="mxbtn1" onclick="clearX.noTextm11()">X</button></td>
+                                </tr>
+                                <tr>
+                                    <td><label id="mlb12" class="dis">Favorite Food:</label></td>
+                                    <td><input type="text" class="dis" id="tbx12" size="35"/></td>
+                                    <td><button class="dis help" id="help12" onclick="Alert.render('Simply type the name of your favorite delicious food in the box, then use the arrows to move it around the page! The X button will clear out so you can play again.')">?</button></td>
+                                    <td><button class="dis arrow" id="left12" onclick="moveCtoL.transfer12()">&#60;</button></td>
+                                    <td><button class="dis arrow" id="right12" onclick="moveCtoR.rtransfer12()">&#62;</button></td>
+                                    <td><button class="dis xclose" id="mxbtn1" onclick="clearX.noTextm12()">X</button></td>
+                                </tr>
+                            </table>
+                            <div id="spacer"></div>
+                        </div>
+                    </div>
+                    
+                    <!--right form to display user input-->
+                    <div class="col-md-3">
+                        <div id="rightForm">
+                            <br>
+                            <label class="dis" id="rlb1"></label>
+                            <button class="dis pull-right xclose" id="rxbtn1" onclick="clearX.noTextr()">X</button>
+                            <button class="dis pull-right arrow" id="rbtn1" onclick="moveRtoL.moveL()">&#60;</button><br>
+                            
+                            <label class="dis" id="rlb2"></label>
+                            <button class="dis pull-right xclose" id="rxbtn2" onclick="clearX.noTextr2()">X</button>
+                            <button class="dis pull-right arrow" id="rbtn2" onclick="moveRtoL.moveL2()">&#60;</button><br>
+                            
+                            <label class="dis" id="rlb3"></label>
+                            <button class="dis pull-right xclose" id="rxbtn3" onclick="clearX.noTextr3()">X</button>
+                            <button class="dis pull-right arrow" id="rbtn3" onclick="moveRtoL.moveL3()">&#60;</button><br>
+                            
+                            <label class="dis" id="rlb4"></label>
+                            <button class="dis pull-right xclose" id="rxbtn4" onclick="clearX.noTextr4()">X</button>
+                            <button class="dis pull-right arrow" id="rbtn4" onclick="moveRtoL.moveL4()">&#60;</button><br>
+                            
+                            <label class="dis" id="rlb5"></label>
+                            <button class="dis pull-right xclose" id="rxbtn5" onclick="clearX.noTextr5()">X</button>
+                            <button class="dis pull-right arrow" id="rbtn5" onclick="moveRtoL.moveL5()">&#60;</button><br>
+                            
+                            <label class="dis" id="rlb6"></label>
+                            <button class="dis pull-right xclose" id="rxbtn6" onclick="clearX.noTextr6()">X</button>
+                            <button class="dis pull-right arrow" id="rbtn6" onclick="moveRtoL.moveL6()">&#60;</button><br>
+                            
+                            <label class="dis" id="rlb7"></label>
+                            <button class="dis pull-right xclose" id="rxbtn7" onclick="clearX.noTextr7()">X</button>
+                            <button class="dis pull-right arrow" id="rbtn7" onclick="moveRtoL.moveL7()">&#60;</button><br>
+                            
+                            <label class="dis" id="rlb8"></label>
+                            <button class="dis pull-right xclose" id="rxbtn8" onclick="clearX.noTextr8()">X</button>
+                            <button class="dis pull-right arrow" id="rbtn8" onclick="moveRtoL.moveL8()">&#60;</button><br>
+                            
+                            <label class="dis" id="rlb9"></label>
+                            <button class="dis pull-right xclose" id="rxbtn9" onclick="clearX.noTextr9()">X</button>
+                            <button class="dis pull-right arrow" id="rbtn9" onclick="moveRtoL.moveL9()">&#60;</button><br>
+                            
+                            <label class="dis" id="rlb10"></label>
+                            <button class="dis pull-right xclose" id="rxbtn10" onclick="clearX.noTextr10()">X</button>
+                            <button class="dis pull-right arrow" id="rbtn10" onclick="moveRtoL.moveL10()">&#60;</button><br>
+                            
+                            <label class="dis" id="rlb11"></label>
+                            <button class="dis pull-right xclose" id="rxbtn11" onclick="clearX.noTextr11()">X</button>
+                            <button class="dis pull-right arrow" id="rbtn11" onclick="moveRtoL.moveL11()">&#60;</button><br>
+                            
+                            <label class="dis" id="rlb12"></label>
+                            <button class="dis pull-right xclose" id="rxbtn12"onclick="clearX.noTextr12()">X</button>
+                            <button class="dis pull-right arrow" id="rbtn12" onclick="moveRtoL.moveL12()">&#60;</button><br>
+                            <div id="spacer"></div>
+                        </div>
+                    </div><!--end right side of form page, labels for user input-->
+                    
+                </div><!--end row-->    
+            </div><!-- end container-->
+        </div><!--end jumbo-->
+        
+         <!--footer-->
+        <div class="footer">
+            <div class="container">
+                <div id="sig" class="pull-left"><a href="mailto:marnie_tisdale@yahoo.com">By: Cy &lt;3</a></div>
+                <div id="copy" class="pull-right">2014 &copy;</div>
+            </div>
+        </div>
+    
+    <!--placeholders to put dialog and screen overlay into-->
+    <div id="boxoverlay"></div>
+    <div id="boxholder"></div>
+        
+    </body>
+</html>
